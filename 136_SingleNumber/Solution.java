@@ -1,32 +1,17 @@
-public class Solution {
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
-     * }
-     */
-    class Solution {
-        public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
-	    // If other node is null, no addition.
-            if (t1 == null) {
-                return t2;
+class Solution {
+    public int singleNumber(int[] nums) {
+        // Use HashMap O(N)
+        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+        int a = 0;
+        
+        for (int i = 0; i < nums.length; i++) {
+            if (!hm.containsKey(nums[i])) {
+                hm.put(nums[i],null);
+                a += nums[i];
+            } else {
+                a -= nums[i];
             }
-            if (t2 == null) {
-                return t1;
-            }
-	
-	    // Merge values into Tree 1
-            t1.val += t2.val;
-	    
-            // Recursive call to merge all right and left branches
-            t1.left = mergeTrees(t1.left, t2.left);
-            t1.right = mergeTrees(t1.right, t2.right);
-
-	    // Return reference to merged tree (t1)
-            return t1;
         }
+        return a;
     }
 }
