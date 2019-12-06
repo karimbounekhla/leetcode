@@ -1,9 +1,9 @@
-# 136. Single Number
+# 226. Invert Binary Tree
 
-https://leetcode.com/problems/single-number/
+https://leetcode.com/problems/invert-binary-tree/
 
 ![image](image.png)
 
-Runtime: 5 ms, faster than 40.46% of Java online submissions for Single Number.
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Invert Binary Tree.
 
-Memory Usage: 40.3 MB, less than 91.11% of Java online submissions for Single Number.
+Memory Usage: 34.1 MB, less than 100.00% of Java online submissions for Invert Binary Tree.
